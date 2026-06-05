@@ -1,8 +1,11 @@
 # AI Engineering Tutorial
 
 **Author:** Khashayar Alipour
+
 **Credit:** [Ali Pilehvar Meibody](https://github.com/APMaii) 
+
 **License:** MIT
+
 **Year:** 2026
 
 
@@ -26,7 +29,7 @@ This repo contains Tutorial files for professional AI Engineering: numerical com
 | **01** | CLI & Shell | Bash, navigation, file management, text editors (vim/nano), networking tools | [CLI.md](Tutorials/CLI.py) |
 | **02** | Linux | Shell, navigation, file management, Commands, Streams, Pipelines | [Linux.py](Tutorials/Linux.py) |
 | **03** | Git & Version Control | Local versioning, staging, commits, GitHub, project supervision | [Git.md](Tutorials/Git.md) |
-| **04** | Telegram Bots | Bot setup, handlers (command, message, callback), inline keyboards, conversation flow | [Telegram_tutorial/](telegram_tutorial/README.md) |
+| **04** | Telegram Bots | Bot setup, handlers (command, message, callback), inline keyboards, conversation flow | [Telegram_tutorial/](Telegram_tutorial/README.md) |
 | **05** | NumPy | Arrays, indexing, slicing, broadcasting, linear algebra, numerical computation | [Numpy.py](Tutorials/numpy.py) |
 | **06** | Matplotlib | Visualization and graphics with matplotlib | [Matplotlib.ipynb](Tutorials/Matplotlib.ipynb) |
 | **07** | Linear Algebra | Vectors, matrices, transformations, eigenvalues, and core algebra for AI | [Linear_Algebra.py](Tutorials/linear_algebra.py) |
