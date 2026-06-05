@@ -2,7 +2,7 @@
 
 
 <p align="center">
-  <img src="Pictures/git.png" alt="git" width="400"/>
+  <img src="../Pictures/git.png" alt="git" width="400"/>
 </p>
 
 
@@ -123,8 +123,8 @@ This file gives you a quick summary for Git and Github.
 `git merge -no-ff`  →  solve a branch conflict with no fast-forward merge
 
 
-<p align="center"><img src="Pictures/remote1.png" alt="SSH" width="400"/></p>
-<p align="center"><img src="Pictures/remote2.png" alt="SSH" width="400"/></p>
+<p align="center"><img src="../Pictures/remote1.png" alt="SSH" width="400"/></p>
+<p align="center"><img src="../Pictures/remote2.png" alt="SSH" width="400"/></p>
 
 
 
@@ -138,12 +138,12 @@ This file gives you a quick summary for Git and Github.
 
 On a private repo:  Generate a ssh key (private and public) using `ssh-keygen`, insert the key inside github and connect your desktop with github. From now on no password needed for cloning repos from github. After cloning, repo will be accessed throught your desktop and changes in content can be made and pushed to the remote.
 
-<p align="center"><img src="Pictures/ssh1.png" alt="SSH" width="400"/></p>
-<p align="center"><img src="Pictures/ssh2.png" alt="SSH" width="400"/></p>
-<p align="center"><img src="Pictures/ssh3.png" alt="SSH" width="400"/></p>
-<p align="center"><img src="Pictures/ssh4.png" alt="SSH" width="400"/></p>
-<p align="center"><img src="Pictures/ssh5.png" alt="SSH" width="400"/></p>
-<p align="center"><img src="Pictures/ssh6.png" alt="SSH" width="400"/></p>
+<p align="center"><img src="../Pictures/ssh1.png" alt="SSH" width="400"/></p>
+<p align="center"><img src="../Pictures/ssh2.png" alt="SSH" width="400"/></p>
+<p align="center"><img src="../Pictures/ssh3.png" alt="SSH" width="400"/></p>
+<p align="center"><img src="../Pictures/ssh4.png" alt="SSH" width="400"/></p>
+<p align="center"><img src="../Pictures/ssh5.png" alt="SSH" width="400"/></p>
+<p align="center"><img src="../Pictures/ssh6.png" alt="SSH" width="400"/></p>
 
 
 
