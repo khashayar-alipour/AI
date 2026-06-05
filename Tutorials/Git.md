@@ -1,6 +1,10 @@
 # 👽 Git-scm (source control manager)
 
-<p align="center"><img src="Pictures/git.png" alt="git" width="400"/></p>
+
+<p align="center">
+  <img src="Pictures/git.png" alt="git" width="400"/>
+</p>
+
 
 ###  ✔️ About the Project
 
@@ -121,6 +125,7 @@ This file gives you a quick summary for Git and Github.
 
 <p align="center"><img src="Pictures/remote1.png" alt="SSH" width="400"/></p>
 <p align="center"><img src="Pictures/remote2.png" alt="SSH" width="400"/></p>
+
 
 
 
