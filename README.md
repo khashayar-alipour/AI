@@ -31,7 +31,7 @@ This repo contains Tutorial files for professional AI Engineering: numerical com
 | **03** | Git & Version Control | Local versioning, staging, commits, GitHub, project supervision | [Git.md](Tutorials/Git.md) |
 | **04** | Telegram Bots | Bot setup, handlers (command, message, callback), inline keyboards, conversation flow | [Telegram_tutorial/](Telegram_tutorial/README.md) |
 | **05** | NumPy | Arrays, indexing, slicing, broadcasting, linear algebra, numerical computation | [Numpy.py](Tutorials/numpy.py) |
-| **06** | Matplotlib | Visualization and graphics with matplotlib | [Matplotlib.ipynb](Tutorials/Matplotlib.ipynb) |
+| **06** | Matplotlib | Visualization and graphics with matplotlib | [Matplotlib.ipynb](Tutorials/matplotlib.ipynb) |
 | **07** | Linear Algebra | Vectors, matrices, transformations, eigenvalues, and core algebra for AI | [Linear_Algebra.py](Tutorials/linear_algebra.py) |
 | **08** | Calculus | Derivatives, gradients, optimization intuition, and calculus essentials for ML | [Calculus.py](Tutorials/calculus.py) |
 | **09** | Numerical Methods | Numerical stability, approximation, and computational techniques | [Numerical.py](Tutorials/numerical_calculation.py) |
@@ -114,6 +114,7 @@ AI/
 ## Contact
 
 [Gmail](khashayar.alipour111@gmail.com)
+
 [linkedin](https://www.linkedin.com/in/khashayar-alipour-99543b414/)
 
 
