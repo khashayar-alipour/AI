@@ -41,12 +41,12 @@ This repo contains Tutorial files for professional AI Engineering: numerical com
 ## Quiz
 
 
-| Quiz | Focus | Suggested Prerequisite | File |
-|------|-------|------------------------|------|
-| **Q1** | Advanced Python, class methods, and errors | Modules 01-02 | [Q1.py](Quiz/Q1.py) |
-| **Q2** | CLI and Git workflow practice | Modules 03-04 | [Q2.py](Quiz/Q2.py) |
-| **Q3** | NumPy exercises | Module 06 | [Q3.py](Quiz/Q3.py) |
-| **Q4** | Matplotlib exercises | Module 07 | [Q4.py](Quiz/Q4.py) |
+| Quiz | Focus | File |
+|------|-------|------|
+| **Q1** | Advanced Python, class methods, and errors | [Q1_A.py](Quiz/Q1_A.py) - [Q1_B.py](Quiz/Q1_B.py) - [Q1_C.py](Quiz/Q1_C.py) |
+| **Q2** | CLI and Git workflow practice | [Q2_A.py](Quiz/Q2_A.py) - [Q2_B.py](Quiz/Q2_B.py) |
+| **Q3** | NumPy exercises | [Q3_A.py](Quiz/Q3_A.py) - [Q3_B.py](Quiz/Q3_B.py) - [Q3_C.py](Quiz/Q3_C.py) |
+| **Q4** | Matplotlib exercises | [Q4_A.py](Quiz/Q4_A.py) - [Q4_B.py](Quiz/Q4_B.py) - [Q4_C.py](Quiz/Q4_C.py) - [Q4_D.py](Quiz/Q4_D.py) |
 
 
 ---
