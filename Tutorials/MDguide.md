@@ -21,11 +21,6 @@
 > 4- Markdown extra → contains additional features   
 
 
-<p align="center">
-  <img src="feature.png" alt="Markdown" width="400"/>
-</p>
-
-
 ---
 
 ## ⚙ Installation
@@ -39,13 +34,13 @@ cd awesome-project
 
 ## ✨ Features
 
-[x] GitHub Flavored Markdown
-[x] Code Blocks با syntax highlighting
-[x] Tables
-[x] Task Lists
-[x] Images
-[x] Emojis 😄
-[x] Collapsible Sections
+[x] GitHub Flavored Markdown   
+[x] Code Blocks با syntax highlighting   
+[x] Tables   
+[x] Task Lists   
+[x] Images   
+[x] Emojis 😄   
+[x] Collapsible Sections   
 
 ---
 
@@ -100,6 +95,15 @@ Agents & Databases → Linux & DevOps
 
 - [Markdown online Editor](https://dillinger.io/)   
 [ name ] ( link )   
+
+
+## 🖼️ Add a picture   
+```
+<p align="center">
+  <img src="picture.png" alt="Markdown" width="400"/>
+</p>
+```
+
 
 ---
 ---
