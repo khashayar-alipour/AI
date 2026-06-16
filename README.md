@@ -26,15 +26,19 @@ This repo contains Tutorial files for professional AI Engineering: numerical com
 
 | Module | Topic | Description | File |
 |--------|-------|-------------|------|
-| **01** | CLI & Shell | Bash, navigation, file management, text editors (vim/nano), networking tools | [CLI.md](Tutorials/CLI.py) |
-| **02** | Linux | Shell, navigation, file management, Commands, Streams, Pipelines | [Linux.py](Tutorials/Linux.py) |
-| **03** | Git & Version Control | Local versioning, staging, commits, GitHub, project supervision | [Git.md](Tutorials/Git.md) |
-| **04** | Telegram Bots | Bot setup, handlers (command, message, callback), inline keyboards, conversation flow | [Telegram_tutorial/](Telegram_tutorial/README.md) |
-| **05** | NumPy | Arrays, indexing, slicing, broadcasting, linear algebra, numerical computation | [Numpy.py](Tutorials/numpy.py) |
-| **06** | Matplotlib | Visualization and graphics with matplotlib | [Matplotlib.ipynb](Tutorials/matplotlib.ipynb) |
-| **07** | Linear Algebra | Vectors, matrices, transformations, eigenvalues, and core algebra for AI | [Linear_Algebra.py](Tutorials/linear_algebra.py) |
-| **08** | Calculus | Derivatives, gradients, optimization intuition, and calculus essentials for ML | [Calculus.py](Tutorials/calculus.py) |
-| **09** | Numerical Methods | Numerical stability, approximation, and computational techniques | [Numerical.py](Tutorials/numerical_calculation.py) |
+| **01** | Python | Variables, types, control flow, functions, classes, iterables, advanced OOP |  |
+| **02** | Markdown | A guideline for Markdown language | [MDguide.md](Tutorials/MDguide.md) |
+| **03** | CLI & Shell | Bash, navigation, file management, text editors (vim/nano), networking tools | [CLI.md](Tutorials/CLI.py) |
+| **04** | Linux | Shell, navigation, file management, Commands, Streams, Pipelines | [Linux.py](Tutorials/Linux.py) |
+| **05** | Git & Version Control | Local versioning, staging, commits, GitHub, project supervision | [Git.md](Tutorials/Git.md) |
+| **06** | Telegram Bots | Bot setup, handlers (command, message, callback), inline keyboards, conversation flow | [Telegram_tutorial/](Telegram_tutorial/README.md) |
+| **07** | NumPy | Arrays, indexing, slicing, broadcasting, linear algebra, numerical computation | [Numpy.py](Tutorials/numpy.py) |
+| **08** | Matplotlib | Visualization and graphics with matplotlib | [Matplotlib.ipynb](Tutorials/matplotlib.ipynb) |
+| **09** | Linear Algebra | Vectors, matrices, transformations, eigenvalues, and core algebra for AI | [Linear_Algebra.py](Tutorials/linear_algebra.py) |
+| **10** | Calculus | Derivatives, gradients, optimization intuition, and calculus essentials for ML | [Calculus.py](Tutorials/calculus.py) |
+| **11** | Numerical Methods | Numerical stability, approximation, and computational techniques | [Numerical.py](Tutorials/numerical_calculation.py) |
+| **12** | Pandas | Library for data analysis and work with data | [pandas.py](Tutorials/pandas.py) |
+| **13** | Data cleaning | Data Cleaning before Machine learning (With Pandas) | [pre_processing.py](Tutorials/pre_processing.py) |
 
 ---
 
