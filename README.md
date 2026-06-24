@@ -39,6 +39,7 @@ This repo contains Tutorial files for professional AI Engineering: numerical com
 | **11** | Numerical Methods | Numerical stability, approximation, and computational techniques | [Numerical.py](Tutorials/numerical_calculation.py) |
 | **12** | Pandas | Library for data analysis and work with data | [pandas.py](Tutorials/pandas.py) |
 | **13** | Data cleaning | Data Cleaning before Machine learning (With Pandas) | [pre_processing.py](Tutorials/pre_processing.py) |
+| **14** | Statistics | Statistics Overview required for Machine learning | [statistics.py](Tutorials/statistics.py) |
 
 ---
 
@@ -84,7 +85,10 @@ AI/
 │   ├── Linux.md               # Linux & DevOps
 │   ├── linear_Algebra.py
 │   ├── calculus.py
-│   └── numerical.py
+│   ├── numerical.py
+│   ├── pandas.py
+│   ├── pre_processing.py
+│   └── statistics.py
 │
 │
 └── Quiz/
