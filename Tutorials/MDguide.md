@@ -1,29 +1,24 @@
 
-# 🚀 Markdown Guide Project
+# 🚀 Markdown Guide Project   
 
-**Creator:** Khashayar Alipour
-**Credit:** Ali Pilehvar Meibody
-**Contact:** khashayar.alipour111@gmail.com
-**License:** MIT
-**Year:** 2026
+**Creator:** Khashayar Alipour    
+**Credit:** Ali Pilehvar Meibody   
+**Contact:** khashayar.alipour111@gmail.com   
+**License:** MIT   
+**Year:** 2026   
 
-### 🧠 About the Project
+### 🧠 About the Project   
 
-> This file explains how to write and use the syntax of the Markdown language. 
->It is concise and compact, making it easy to learn from and use as a quick reference. 
->Programming without a proper Readme file isn't professional. 
->The main goal of this project is to showcase the professional capabilities of Markdown.
+> This file explains how to write and use the syntax of the Markdown language.    
+>It is concise and compact, making it easy to learn from and use as a quick reference.    
+>Programming without a proper Readme file isn't professional.    
+>The main goal of this project is to showcase the professional capabilities of Markdown.   
 
-> Types of Markdown:
-> 1- Original Markdown → initial version, limited features, simple
-> 2- CommonMark → standardized, well-defined and precise behavior, very popular nowadays
-> 3- Github Flavored Markdown (GFM) → Designed for Github, table/checklist/emoji, most widely used version
-> 4- Markdown extra → contains additional features
-
-
-<p align="center">
-  <img src="feature.png" alt="Markdown" width="400"/>
-</p>
+> Types of Markdown:   
+> 1- Original Markdown → initial version, limited features, simple   
+> 2- CommonMark → standardized, well-defined and precise behavior, very popular nowadays   
+> 3- Github Flavored Markdown (GFM) → Designed for Github, table/checklist/emoji, most widely used version   
+> 4- Markdown extra → contains additional features   
 
 
 ---
@@ -39,13 +34,13 @@ cd awesome-project
 
 ## ✨ Features
 
-[x] GitHub Flavored Markdown
-[x] Code Blocks با syntax highlighting
-[x] Tables
-[x] Task Lists
-[x] Images
-[x] Emojis 😄
-[x] Collapsible Sections
+[x] GitHub Flavored Markdown   
+[x] Code Blocks با syntax highlighting   
+[x] Tables   
+[x] Task Lists   
+[x] Images   
+[x] Emojis 😄   
+[x] Collapsible Sections   
 
 ---
 
@@ -96,11 +91,19 @@ Agents & Databases → Linux & DevOps
 
 ---
 
-## 📌 Give a reference
+## 📌 Give a reference   
 
-- [Python Built-in Functions](https://docs.python.org/3/library/functions.html)
-- [Markdown online Editor](https://dillinger.io/)
-- [Git Documentation](https://git-scm.com/doc)
+- [Markdown online Editor](https://dillinger.io/)   
+[ name ] ( link )   
+
+
+## 🖼️ Add a picture   
+```
+<p align="center">
+  <img src="picture.png" alt="Markdown" width="400"/>
+</p>
+```
+
 
 ---
 ---
@@ -154,7 +157,7 @@ Agents & Databases → Linux & DevOps
 ```
 
 
-~~text~~
-__text__
+~~ text ~~  ->   ~~text~~   
+__ text __  ->   __text__   
 
 
