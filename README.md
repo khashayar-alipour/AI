@@ -40,6 +40,7 @@ This repo contains Tutorial files for professional AI Engineering: numerical com
 | **12** | Pandas | Library for data analysis and work with data | [pandas.py](Tutorials/pandas.py) |
 | **13** | Data cleaning | Data Cleaning before Machine learning (With Pandas) | [pre_processing.py](Tutorials/pre_processing.py) |
 | **14** | Statistics | Statistics Overview required for Machine learning | [statistics.py](Tutorials/statistics.py) |
+| **15** | Linear Regression | Introduction of Machine learning and linear regression, scikit-learn | [regression.py](Tutorials/regression.py) |
 
 ---
 
@@ -88,7 +89,9 @@ AI/
 │   ├── numerical.py
 │   ├── pandas.py
 │   ├── pre_processing.py
-│   └── statistics.py
+│   ├── statistics.py
+│   ├── regression.py
+│   └── 
 │
 │
 └── Quiz/
