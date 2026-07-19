@@ -416,7 +416,7 @@ dtypes: float64(2), object(1)
 # خب این ستون رو نمیشه کلا حذف کرد که. پس چیکار کنیم؟
 
 print(type(data['feshar'].loc[0]))    # <class 'str'>
-print(data['feshar'].loc[0])   # 1'
+print(data['feshar'].loc[0])   # '1'
 
 
 
@@ -508,6 +508,29 @@ print(data)
 '''
 
 
+#------ apply -------
+# متود apply یعنی یک تابع را روی تک‌تک داده‌های یک ستون یا سطر اجرا کن
+# وقتی می‌خواهی روی هر مقدار یک قانون خاص اعمال کنی از apply استفاده میشه
+
+# در ستون دما فقط دماهایی رو برگردون که دمای بین 0 تا 100 دارن وگرنه None برگردون
+data["dama"] = data["dama"].apply(lambda x: x if 0 <= x <= 100 else None)
+
+
+# متود apply روی سطرها (axis=1)
+# بررسی چند ستون بصورت همزمان
+# اگر سن زیر 18 باشه داشتن گواهینامه منطقی نیست
+df = pd.DataFrame({
+    "age": [20, 25, 17],
+    "license": ["Yes", "Yes", "Yes"]  })
+
+def check_license(row):
+    if row["age"] < 18:
+        return "No"
+    return row["license"]
+
+df["license"] = df.apply(check_license, axis=1)
+
+
 
 
 
@@ -580,6 +603,218 @@ data.tail
 data.to_excel('/Users/apm/Desktop/cleaned_data_15khordad.xlsx')
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''
+===============================================================================
+===============================================================================
+===============================================================================
+====================                                       ==================== 
+====================                Overview               ====================
+====================                                       ====================
+===============================================================================
+===============================================================================
+'''
+
+
+#    dama    feshar  estehkam
+# 0  40.0     '1'     400.0
+# 1  50.0     '2'     500.0
+# 2  60.0     '3'     600.0
+# 3  70.0     '4'     700.0
+# 4  80.0     '5'     NaN
+# 5  90.0     '6'     900.0
+# 6  100.0    '7'     1000.0
+# 7  120.0    '8'     1100.0
+# 8  NaN      '9'     1200.0
+# 9  160.0    '10'    1300.0
+# 10 100.0    '7'     1000.0
+
+
+import pandas as pd
+data = pd.read_excel('/Users/apm/Desktop/data.xlsx')
+
+data.head()
+data.head(6)
+data.tail()
+data.tail(6)
+
+
+data.info()
+# <class 'pandas.core.frame.DataFrame'>
+# RangeIndex: 11 entries, 0 to 10
+# Data columns (total 3 columns):
+#      Column    Non-Null Count  Dtype  
+# ---  ------    --------------  -----  
+#  0   dama      10 non-null     float64
+#  1   feshar    11 non-null     object 
+#  2   estehkam  10 non-null     float64
+# dtypes: float64(2), object(1)
+# memory usage: 392.0+ bytes
+
+
+
+data.describe()
+#              dama    estehkam
+# count   10.000000    10.00000
+# mean    87.000000   870.00000
+# std     35.605867   305.68684
+# min     40.000000   400.00000
+# 25%     62.500000   625.00000
+# 50%     85.000000   950.00000
+# 75%    100.000000  1075.00000
+# max    160.000000  1300.00000
+
+data['dama'].describe()
+# count     10.000000
+# mean      87.000000
+# std       35.605867
+# min       40.000000
+# 25%       62.500000
+# 50%       85.000000
+# 75%      100.000000
+# max      160.000000
+
+
+
+# برای شمارش تعداد در دیتاهای گسسته. مثلا مرد مرد مرد زن زن مرد
+data.value_count()
+
+
+
+data['dama'].max() #160.0
+data['dama'].min()
+data['dama'].mean()   # average
+data['dama'].sum()   # total sum = 870.0
+data['dama'].count()
+data['dama'].median() 
+data['dama'].std()     # standard eviation
+
+
+
+
+
+
+#======================
+'''  1- Empty cell  '''
+#======================
+
+data.info()
+# RangeIndex: 11 entries, 0 to 10  -->   هر ستون 11 ردیف
+# Data columns (total 3 columns):
+#      Column    Non-Null Count  
+# ---  ------    --------------
+#  0   dama      10 non-null   -->  این ستون یک خانه خالی داره
+#  1   feshar    11 non-null 
+#  2   estehkam  10 non-null   -->  این ستون یک خانه خالی داره
+
+
+data.isnull()
+#      dama  feshar  estehkam
+# ..   ...     ...       ...
+# 4   False   False     [True]  -->  خانه خالی
+# ..   ...     ...       ...
+# 8   [True]  False     False   --> خانه خالی
+# ..   ...     ...       ... 
+
+
+# متود isnull یکبار در ستون 'dama' و یکبار در ستون 'estehkam' تونسته null پیدا کنه
+data.isnull().sum()
+# dama        1
+# feshar      0
+# estehkam    1
+
+
+data.dropna(inplace=True)   # Delete null cells
+data['dama'].dropna(inplace=True)
+
+
+data.fillna(10, inplace=True)    # جایگزینی خانه‌های خالی با عدد 10
+
+dama_mean = data['dama'].mean()    # 87.0
+data.fillna(dama_mean, inplace=True)   # جایگزینی خانه‌های خالی با میانگین ستون دما
+
+data.fillna(method='ffill')    # forward fill (از ردیف بالاتر میگیره)
+data.fillna(method='bfill')    # backward fill (از ردیف پایین تر میگیره)
+
+
+
+
+
+#==========================
+'''  2- Wrong format  '''
+#==========================
+# ممکنه فرمت دیتا در یک خانه اشتباه باشه
+
+data.info()
+# Data columns (total 3 columns):
+#     Column    Non-Null Count  Dtype  
+# ---  ------    --------------  -----  
+#  0   dama      10 non-null     float64
+#  1   feshar    11 non-null     object  -->  در این ستون دیتایی با فرمت متفاوت از بقیه داریم
+#  2   estehkam  10 non-null     float64
+
+
+# در یک خانه یک عدد بجای اینکه با تایپ float باشه با تایپ str ذخیره شده
+print(type(data['feshar'].loc[0]))    # <class 'str'>
+print(data['feshar'].loc[0])   # '1'
+
+
+data['feshar'] = pd.to_numeric(data['feshar'])   # تبدیل تایپ رشته به عدد در تمام ردیف های این ستون
+data['feshar'] = data['feshar'].astype(int)
+data['feshar'] = data['feshar'].astype(float)
+data['time'] = pd.to_datetime(data['time'])    # اگه یک تاریخ با تایپ رشته داشتیم
+
+
+
+
+
+#===================
+'''  3- Logical '''
+#===================
+# مثلا توی ستون دما ممکنه دمای منفی داشته باشیم
+# یا فشار حداکثر 10 باشه، ولی در یک ستون فشار 12 داشته باشیم
+
+
+data.describe()    # با این متود بررسی میکنیم مشکل منطقی وجود داره یا نه
+
+
+# روش filtering
+data = data[data['dama']>=0]    # هر ردیفی در ستون دما عدد منفی باشه حذف میشه
+
+
+# روش apply
+data["dama"] = data["dama"].apply(lambda x: x if x >= 0 else None)
+
+
+
+
+
+#=====================
+'''  4- duplciated '''
+#=====================
+# وجود دیتای تکراری
+
+data.drop_duplicates(inplace=True)    # این متود ردیفی که در همه ستونها تکراریه حذف میکنه
+
+data.drop_duplicates(subset=['dama'],inplace=True)    # حذف کردن دیتاهای تکراری در یک ستون بدون توجه به ستونهای دیگه
 
 
 

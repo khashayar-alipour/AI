@@ -40,7 +40,11 @@ This repo contains Tutorial files for professional AI Engineering: numerical com
 | **12** | Pandas | Library for data analysis and work with data | [pandas.py](Tutorials/pandas.py) |
 | **13** | Data cleaning | Data Cleaning before Machine learning (With Pandas) | [pre_processing.py](Tutorials/pre_processing.py) |
 | **14** | Statistics | Statistics Overview required for Machine learning | [statistics.py](Tutorials/statistics.py) |
-| **15** | Linear Regression | Introduction of Machine learning and linear regression, scikit-learn | [regression.py](Tutorials/regression.py) |
+| **15** | Linear Regression | Types of Machine learning - Intro of regression, Intro of linear regression concepts, Intro of scikit-learn, gradient descent, SGDRegressor model, Intro of loss function | [regression.py](Tutorials/regression.py) |
+| **16** | ML Concepts | Machine Learning glossary | [ML_cocepts.py](Tutorials/ML_concepts.py) |
+| **17** | Machine Learning Intro | linear regression, SGDRegressor model class, LinearRegression model, data Scaling, classification -> logisticRegression(), Model validity, train_test_split(), sklear metrics | [ML_intro.py](Tutorials/ML_intro.py) |
+| **18** |  |  |
+
 
 ---
 
@@ -51,8 +55,11 @@ This repo contains Tutorial files for professional AI Engineering: numerical com
 |------|-------|------|
 | **Q1** | Advanced Python, class methods, and errors | [Q1_A.py](Quiz/Q1_A.py) - [Q1_B.py](Quiz/Q1_B.py) - [Q1_C.py](Quiz/Q1_C.py) |
 | **Q2** | CLI and Git workflow practice | [Q2_A.py](Quiz/Q2_A.py) - [Q2_B.py](Quiz/Q2_B.py) |
-| **Q3** | NumPy exercises | [Q3_A.py](Quiz/Q3_A.py) - [Q3_B.py](Quiz/Q3_B.py) - [Q3_C.py](Quiz/Q3_C.py) |
-| **Q4** | Matplotlib exercises | [Q4_A.py](Quiz/Q4_A.py) - [Q4_B.py](Quiz/Q4_B.py) - [Q4_C.py](Quiz/Q4_C.py) - [Q4_D.py](Quiz/Q4_D.py) |
+| **Q3** | NumPy quiz | [Q3_A.py](Quiz/Q3_A.py) - [Q3_B.py](Quiz/Q3_B.py) - [Q3_C.py](Quiz/Q3_C.py) |
+| **Q4** | Matplotlib quiz | [Q4_A.py](Quiz/Q4_A.py) - [Q4_B.py](Quiz/Q4_B.py) - [Q4_C.py](Quiz/Q4_C.py) - [Q4_D.py](Quiz/Q4_D.py) |
+| **Q5** | Pandas quiz | [Q5_A.py](Quiz/Q5_A.py) - [Q5_B.py](Quiz/Q5_B.py) |
+| **Q6** | ML practices, We have 4 data in these Quizes (data cleaning, train model with data, prediction, matplotlib)| [Q6_A.py](Quiz/Q6_A.py) - [Q6_B.py](Quiz/Q6_B.py) - [Q6_C.py](Quiz/Q6_C.py) - [Q6_D.py](Quiz/Q6_D.py) |
+| **Q7** |
 
 
 ---
@@ -84,13 +91,22 @@ AI/
 │   ├── numpy.py               # NumPy
 │   ├── matplotlib.ipynb       # Matplotlib
 │   ├── Linux.md               # Linux & DevOps
-│   ├── linear_Algebra.py
+│   ├── linear_Algebra.py      # statistics
 │   ├── calculus.py
 │   ├── numerical.py
 │   ├── pandas.py
 │   ├── pre_processing.py
 │   ├── statistics.py
-│   ├── regression.py
+│   ├── regression.py         # start of machine learning
+│   ├── ML_concepts.py
+│   ├── ML_intro.py
+│   ├──
+│   ├──
+│   ├──
+│   ├──
+│   ├──
+│   ├──
+│   ├──
 │   └── 
 │
 │
@@ -99,7 +115,11 @@ AI/
     ├── Q1.md
     ├── Q2.md
     ├── Q3.md
-    └── Q4.md
+    ├── Q4.md
+    ├── Q5.md
+    ├── Q6.md
+    ├── Q7.md
+    └── 
 
 ```
 
