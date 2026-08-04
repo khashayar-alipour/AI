@@ -26,28 +26,28 @@ This repo contains Tutorial files for professional AI Engineering: numerical com
 
 | Module | Topic | Description | File |
 |--------|-------|-------------|------|
-| **01** | Python | Variables, types, control flow, functions, classes, iterables, advanced OOP |  |
-| **02** | Markdown | A guideline for Markdown language | [MDguide.md](Tutorials/MDguide.md) |
-| **03** | CLI & Shell | Bash, navigation, file management, text editors (vim/nano), networking tools | [CLI.md](Tutorials/CLI.py) |
-| **04** | Linux | Shell, navigation, file management, Commands, Streams, Pipelines | [Linux.py](Tutorials/Linux.py) |
-| **05** | Git & Version Control | Local versioning, staging, commits, GitHub, project supervision | [Git.md](Tutorials/Git.md) |
-| **06** | Telegram Bots | Bot setup, handlers (command, message, callback), inline keyboards, conversation flow | [Telegram_tutorial/](Telegram_tutorial/README.md) |
-| **07** | NumPy | Arrays, indexing, slicing, broadcasting, linear algebra, numerical computation | [Numpy.py](Tutorials/numpy.py) |
-| **08** | Matplotlib | Visualization and graphics with matplotlib | [Matplotlib.ipynb](Tutorials/matplotlib.ipynb) |
-| **09** | Linear Algebra | Vectors, matrices, transformations, eigenvalues, and core algebra for AI | [Linear_Algebra.py](Tutorials/linear_algebra.py) |
-| **10** | Calculus | Derivatives, gradients, optimization intuition, and calculus essentials for ML | [Calculus.py](Tutorials/calculus.py) |
-| **11** | Numerical Methods | Numerical stability, approximation, and computational techniques | [Numerical.py](Tutorials/numerical_calculation.py) |
-| **12** | Pandas | Library for data analysis and work with data | [pandas.py](Tutorials/pandas.py) |
-| **13** | Data cleaning | Data Cleaning before Machine learning (With Pandas) | [pre_processing.py](Tutorials/pre_processing.py) |
-| **14** | Statistics | Statistics Overview required for Machine learning | [statistics.py](Tutorials/statistics.py) |
-| **15** | Linear Regression | Types of Machine learning - Intro of regression, Intro of linear regression concepts, Intro of scikit-learn, gradient descent, SGDRegressor model, Intro of loss function | [regression.py](Tutorials/regression.py) |
-| **16** | ML Concepts | Machine Learning glossary | [ML_cocepts.py](Tutorials/ML_concepts.py) |
-| **17** | Machine Learning Intro | linear regression, SGDRegressor model class, LinearRegression model, data Scaling, classification -> logisticRegression(), Model validity, train_test_split(), sklear metrics | [ML_intro.py](Tutorials/ML_intro.py) |
-| **18** | ML Models | ✅Supervised Regression (linear/non-linear) models: Ridge, Lasso, ElasticNet, Decision Tree, Random Forest, KNN, SVM | ✅Ensemble models: Random forest | ✅Hyperparameter Tuning (overfitting, underfitting, generalization)    | [ML_models.py](Tutorials/ML-models.py) |
-| **19** | GridSearchCV | GridSearch and Hyperparameter tuning with cross validation | [ML_GridSearchCV.py](Tutorials/ML_GridSearchCV.py) |
-| **20** | Feature Engineering | Preparing data before ML Pipelines - Data Scaling - PolynomialFeatures - Feature encoding (Label encoding,  One hot encoding, Ordinal encoding) - Feature Selection (SelectKBest, RFE, PCA ) | [feature_engineering.py](Tutorials/feature_engineering.py) |
-| **21** | Machine Learning Pipeline | Complete Pipeline for preprocessing and Modeling, ColumnTransformer concepts | [pipelines.py](Tutorials/pipelines.py) |
-| **22** | Unsupervised ML | Intro on Clustering (KMeans, Hierarchial, DBSCAN, Gaussian Mixture) and Dimentional reduction (PCA, KernelPCA, t-SNE, UMAP) | [unsupervised_ML.py](Tutorials/unsupervised_ML.py) |
+| **01** | Python | ✅ Variables, types, control flow, functions, classes, iterables, advanced OOP |  |
+| **02** | Markdown | ✅ A guideline for Markdown language | [MDguide.md](Tutorials/MDguide.md) |
+| **03** | CLI & Shell | ✅ Bash, navigation, file management, text editors (vim/nano), networking tools | [CLI.md](Tutorials/CLI.py) |
+| **04** | Linux | ✅ Shell, navigation, file management, Commands, Streams, Pipelines | [Linux.py](Tutorials/Linux.py) |
+| **05** | Git & Version Control | ✅ Local versioning, staging, commits, GitHub, project supervision | [Git.md](Tutorials/Git.md) |
+| **06** | Telegram Bots | ✅ Bot setup, handlers (command, message, callback), inline keyboards, conversation flow | [Telegram_tutorial/](Telegram_tutorial/README.md) |
+| **07** | NumPy | ✅ Arrays, indexing, slicing, broadcasting ... | [Numpy.py](Tutorials/numpy.py) |
+| **08** | Matplotlib | ✅ Visualization and graphics with matplotlib | [Matplotlib.ipynb](Tutorials/matplotlib.ipynb) |
+| **09** | Linear Algebra | ✅ Vectors, matrices, transformations, eigenvalues, and core algebra for AI | [Linear_Algebra.py](Tutorials/linear_algebra.py) |
+| **10** | Calculus | ✅ Derivatives, gradients, optimization intuition, and calculus essentials for ML | [Calculus.py](Tutorials/calculus.py) |
+| **11** | Numerical Methods | ✅ Numerical stability, approximation, and computational techniques | [Numerical.py](Tutorials/numerical_calculation.py) |
+| **12** | Pandas | ✅ Library for data analysis and work with data | [pandas.py](Tutorials/pandas.py) |
+| **13** | Data cleaning | ✅ Data Cleaning before Machine learning (With Pandas) | [pre_processing.py](Tutorials/pre_processing.py) |
+| **14** | Statistics | ✅ Statistics Overview required for Machine learning | [statistics.py](Tutorials/statistics.py) |
+| **15** | Linear Regression | ✅ Types of Machine learning  ✅Intro of regression  ✅Intro of linear regression concepts  ✅Intro of scikit-learn  ✅gradient descent, SGDRegressor model  ✅Intro of loss function | [regression.py](Tutorials/regression.py) |
+| **16** | ML Concepts | ✅ Machine Learning glossary | [ML_cocepts.py](Tutorials/ML_concepts.py) |
+| **17** | Machine Learning Intro | ✅linear regression  ✅SGDRegressor model class  ✅LinearRegression model, data Scaling, classification -> logisticRegression()  ✅Model validity, train_test_split(), sklearn metrics | [ML_intro.py](Tutorials/ML_intro.py) |
+| **18** | ML Models | ✅Supervised Regression (linear/non-linear) models: Ridge, Lasso, ElasticNet, Decision Tree, Random Forest, KNN, SVM  ✅Ensemble models: Random forest  ✅Hyperparameter Tuning (overfitting, underfitting, generalization)    | [ML_models.py](Tutorials/ML-models.py) |
+| **19** | GridSearchCV | ✅GridSearch and Hyperparameter tuning with cross validation | [ML_GridSearchCV.py](Tutorials/ML_GridSearchCV.py) |
+| **20** | Feature Engineering | ✅Preparing data before ML Pipelines  ✅Data Scaling  ✅PolynomialFeatures  ✅Feature encoding (Label encoding,  One hot encoding, Ordinal encoding)  ✅Feature Selection (SelectKBest, RFE, PCA ) | [feature_engineering.py](Tutorials/feature_engineering.py) |
+| **21** | Machine Learning Pipeline | ✅Complete Pipeline for preprocessing and Modeling  ✅ColumnTransformer | [pipelines.py](Tutorials/pipelines.py) |
+| **22** | Unsupervised ML | ✅Intro on Clustering (KMeans, Hierarchial, DBSCAN, Gaussian Mixture)  ✅Dimentional reduction (PCA, KernelPCA, t-SNE, UMAP) | [unsupervised_ML.py](Tutorials/unsupervised_ML.py) |
 
 
 ---
