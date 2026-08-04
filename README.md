@@ -43,7 +43,13 @@ This repo contains Tutorial files for professional AI Engineering: numerical com
 | **15** | Linear Regression | Types of Machine learning - Intro of regression, Intro of linear regression concepts, Intro of scikit-learn, gradient descent, SGDRegressor model, Intro of loss function | [regression.py](Tutorials/regression.py) |
 | **16** | ML Concepts | Machine Learning glossary | [ML_cocepts.py](Tutorials/ML_concepts.py) |
 | **17** | Machine Learning Intro | linear regression, SGDRegressor model class, LinearRegression model, data Scaling, classification -> logisticRegression(), Model validity, train_test_split(), sklear metrics | [ML_intro.py](Tutorials/ML_intro.py) |
-| **18** |  |  |
+| **18** | ML Models | Supervised Regression (linear/non-linear) models: Ridge, Lasso, ElasticNet, Decision Tree, Random Forest, KNN, SVM    
+Ensemble models: Random forest   
+Hyperparameter Tuning (overfitting, underfitting, generalization)    | [ML_models.py](Tutorials/ML-models.py) |
+| **19** | GridSearchCV | GridSearch and Hyperparameter tuning with cross validation | [ML_GridSearchCV.py](Tutorials/ML_GridSearchCV.py) |
+| **20** | Feature Engineering | Preparing data before ML Pipelines - Data Scaling - PolynomialFeatures - Feature encoding (Label encoding,  One hot encoding, Ordinal encoding) - Feature Selection (SelectKBest, RFE, PCA ) | [feature_engineering.py](Tutorials/feature_engineering.py) |
+| **21** | Machine Learning Pipeline | Complete Pipeline for preprocessing and Modeling, ColumnTransformer concepts | [pipelines.py](Tutorials/pipelines.py) |
+| **22** | Unsupervised ML | Intro on Clustering (KMeans, Hierarchial, DBSCAN, Gaussian Mixture) and Dimentional reduction (PCA, KernelPCA, t-SNE, UMAP) | [unsupervised_ML.py](Tutorials/unsupervised_ML.py) |
 
 
 ---
@@ -100,11 +106,11 @@ AI/
 │   ├── regression.py         # start of machine learning
 │   ├── ML_concepts.py
 │   ├── ML_intro.py
-│   ├──
-│   ├──
-│   ├──
-│   ├──
-│   ├──
+│   ├── ML_Models.py
+│   ├── ML_GridSearchCV.py
+│   ├── feature_engineering.py
+│   ├── pipelines.py
+│   ├── unsupervised_ML.py
 │   ├──
 │   ├──
 │   └── 

@@ -562,6 +562,35 @@ model.predict(np.array([20,30]).reshape(1,-1))   # array([1])   تو دسته ر
 
 
 '''
+==========================================
+=======   classification metrics   =======
+==========================================
+'''
+
+from sklearn.metrics import accuracy_score
+# این متریک میاد میسنجه که مدل چند درصد دقت داره
+
+#y_test_pred = [1,0,0,0,1,1]
+#y_test = [1,0,1,1,1,0]
+
+test_score_accuracy = accuracy_score(y_test_pred - y_true)
+
+#balanced_accuracy_score
+#top_k_accuracy_score
+#recall_score
+#f1_score
+
+
+
+
+
+
+
+
+
+
+
+'''
 ===============================================
 =======   Statistical models validity   =======
 ===============================================
