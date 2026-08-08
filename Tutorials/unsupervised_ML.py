@@ -11,6 +11,7 @@
 ===============================================================================
 '''
 
+
 # Unsupervised learning concepts:
             #Dimensionality Reduction:
                    # PCA (Principal Component Analysis)
@@ -54,6 +55,7 @@
 #     │   └── Reinforcement Learning
 #     │
 #     └── Deep Learning 
+
 
 
        
@@ -765,60 +767,6 @@ prob = model.predict_proba(x)
 # نمونه اول: ۹۵٪ احتمال دارد در خوشه ۰ باشد
 # نمونه دوم: بین دو خوشه مرزی است (۴۰٪ و ۶۰٪)
 # نمونه سوم: تقریباً مطمئنا در خوشه ۱ قرار دارد
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

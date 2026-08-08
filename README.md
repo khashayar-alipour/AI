@@ -48,6 +48,7 @@ This repo contains Tutorial files for professional AI Engineering: numerical com
 | **20** | Feature Engineering | ✅Preparing data before ML Pipelines  ✅Data Scaling  ✅PolynomialFeatures  ✅Feature encoding (Label encoding,  One hot encoding, Ordinal encoding)  ✅Feature Selection (SelectKBest, RFE, PCA ) | [feature_engineering.py](Tutorials/feature_engineering.py) |
 | **21** | Machine Learning Pipeline | ✅Complete Pipeline for preprocessing and Modeling  ✅ColumnTransformer | [pipelines.py](Tutorials/pipelines.py) |
 | **22** | Unsupervised ML | ✅Intro on Clustering (KMeans, Hierarchial, DBSCAN, Gaussian Mixture)  ✅Dimentional reduction (PCA, KernelPCA, t-SNE, UMAP) | [unsupervised_ML.py](Tutorials/unsupervised_ML.py) |
+| **23** | Artificial Neural Networks (ANN) Intro | ✅Structure of the ANN  ✅Input,Output,Weight  ✅Forward path  ✅Activation function intro  ✅Backpropagation  ✅Process of training in ANN | [neural_nets_intro.ipynb](Tutorials/neural_nets_intro.ipynb) |
 
 
 ---
@@ -109,7 +110,7 @@ AI/
 │   ├── feature_engineering.py
 │   ├── pipelines.py
 │   ├── unsupervised_ML.py
-│   ├──
+│   ├── neural_nets_intro.ipynb
 │   ├──
 │   └── 
 │
