@@ -49,7 +49,8 @@ This repo contains Tutorial files for professional AI Engineering: numerical com
 | **21** | Machine Learning Pipeline | ✅Complete Pipeline for preprocessing and Modeling  ✅ColumnTransformer | [pipelines.py](Tutorials/pipelines.py) |
 | **22** | Unsupervised ML | ✅Intro on Clustering (KMeans, Hierarchial, DBSCAN, Gaussian Mixture)  ✅Dimentional reduction (PCA, KernelPCA, t-SNE, UMAP) | [unsupervised_ML.py](Tutorials/unsupervised_ML.py) |
 | **23** | Machine Learning Examples | ✅ Real examples of supervised regression, supervised classification and unsupervised clustering  ✅ correlation matrix  ✅ confusion matrix | [ML_examples.py](Tutorials/ML_examples.py) |
-| **24** | Artificial Neural Networks (ANN) Intro | ✅Structure of the ANN  ✅Input,Output,Weight  ✅Forward path  ✅Activation function intro  ✅Backpropagation  ✅Process of training in ANN | [neural_nets_intro.ipynb](Tutorials/neural_nets_intro.ipynb) |
+| **24** | Artificial Neural Networks (ANN) Intro | ✅Structure of the ANN  ✅Input,Output,Weight  ✅Forward path  ✅Activation function intro  ✅Backpropagation  ✅Process of training in ANN  ✅Intro of Deep Learning | [neural_nets_intro.ipynb](Tutorials/neural_nets_intro.ipynb) |
+| **25** | Deep Learning | ✅Intro of activation functions  ✅Neural nets layers  ✅Data feeding  ✅MLPClassifier  ✅MLPRegressor  ✅MLP real example coding  ✅Tensorflow  ✅Keras  ✅MNIST dataset  ✅Pytorch | [deel_learning.py](Tutorials/deep_learning.py) |
 
 
 
@@ -112,7 +113,12 @@ AI/
 │   ├── feature_engineering.py
 │   ├── pipelines.py
 │   ├── unsupervised_ML.py
-│   ├── neural_nets_intro.ipynb
+│   ├── neural_nets_intro.ipynb    #introduction of Artificial Neural Networks
+│   ├── deep_learning.py         # basic concepts of deep learning
+│   ├──
+│   ├──
+│   ├──
+│   ├──
 │   ├──
 │   └── 
 │
