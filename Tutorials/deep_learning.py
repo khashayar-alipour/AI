@@ -16,6 +16,8 @@
          # Linear/Identity
          # Sigmoid
          # Tanh
+         # ELU
+         # GELU
          # Softmax
     
 #✅ 2-Layers:
@@ -30,14 +32,28 @@
     
 #✅ 4-Epoch
 
-#✅ 5-MLP(Multi Layer Perceptron):
+#✅ 5-Types of loss function:
+        # MSE (Mean squared error)
+        # MAE (Mean absolute error)
+        # Binary Cross Entropy (BCE)
+        # Categorial Cross Entropy (CCE)
+
+#✅ 6-Optimizer:
+        # SGD
+        # SGD + Momentum
+        # AdaGrad
+        # RMSProp
+        # adam
+        # adamW
+
+#✅ 7-MLP(Multi Layer Perceptron):
         # MLPclassifier
         # MLPregressor
         # solver
 
-#✅ 6-MLP real example
+#✅ 8-MLP real example
 
-#✅ 7-Special and specific libraries for deep learning:
+#✅ 9-Special and specific libraries for deep learning:
         # Tensorflow
         # Keras
         # MNIST dataset
@@ -45,16 +61,19 @@
 
 
 
+
+
 # ANN = Artificial Neural Network
+
+
 
 '''
 ===============================================
 =======  ⭐  Activation functions  ⭐  =======
 ===============================================
 '''
-----------------------------------------
- ✅اصلاً Activation Function چرا لازم است؟
-----------------------------------------
+
+ # چرا Activation Function لازم است؟
 
 # x₁ ── w₁ ──┐
 # x₂ ── w₂ ──┤
@@ -62,14 +81,11 @@
 #            │
 #            b ──┘
 
-# ابتدا نورون ورودی‌ها را با وزن‌ها ترکیب می‌کند:     z = w_1x_1+w_2x_2+w_3x_3+b
+# ابتدا هر نورون ورودی‌ها را با وزن‌ها ترکیب می‌کند:     z = w_1x_1+w_2x_2+w_3x_3+b
 # بعد activation function روی z اعمال می‌شود:     a=f(z)
 # پس Activation Function تعیین می‌کند خروجی نورون، بعد از ترکیب ورودی‌ها، چه مقداری باشد
 
-
------------------------------------------------
-✅ حالا اگه Activation function نباشه چی میشه؟
------------------------------------------------
+# حالا اگه Activation function نباشه چی میشه؟
 # حتی اگر 10 لایه هم بسازیم، کل شبکه در نهایت فقط یک تبدیل خطی خواهد بود    y=ax+b
 # یعنی شبکه نمی‌تواند روابط پیچیده و غیرخطی را یاد بگیرد
 # درواقع af باعث میشه شبکه بتواند non-linear patterns را یاد بگیرد
@@ -91,9 +107,9 @@
 # --------------------------------------------------------------------
 
 
----------------------------------------
-✅ linear/Identity activation function
----------------------------------------
+"---------------------------------------"
+"✅ linear/Identity activation function"
+"---------------------------------------"
 # ساده ترین نوع af هست. هر چیزی وارد شود همان خارج می‌شود:      f(x)=x
 # -5 → -5
 #  0 →  0
@@ -115,23 +131,24 @@ MLPRegressor(activation="identity")
               
 
 
-----------------------------------------
-✅ Sigmoid/Logistic activation function
-----------------------------------------
+"----------------------------------------"
+"✅ Sigmoid/Logistic activation function"
+"----------------------------------------"
 # f(x) = 1 / (1 + e⁻ˣ)
 # یعنی نتیجه بین 0 و 1 هست
-               y
-               ↑
-               1   
-               |
-               |  ───────────
-               | /
-               |/
-               /
-              /|
-             / |
--10 --──────/--|------------ 10  → x
-               0
+# پس خروجی normalize شده هست
+
+              y
+              ↑
+              1   
+              |  ───────────
+              | /
+              |/
+              / 0.5
+             /|
+            / |
+-∞  ───────/--|------------ ∞  → x
+              0
 
 
 # یکی از معروف‌ترین activation functions است
@@ -148,51 +165,108 @@ MLPRegressor(activation="identity")
 # ازونجایی که با این af می‌توانیم خروجی را به شکل probability تفسیر کنیم، بنابراین برای classification مناسبه. مثلا:
 0.92 → high probability  class 1
 0.15 → low probability  class 2
+# پس برای binary classification کاربردیه
 
-# اما sigmoid یک مشکل دارد. در قسمت‌های خیلی مثبت یا خیلی منفی، شیب sigmoid خیلی کوچک می‌شود.
-# این می‌تواند باعث vanishing gradient شود.
-# به همین دلیل امروزه در hidden layerها معمولاً ReLU انتخاب محبوب‌تری است.
+# اما sigmoid یک مشکل دارد. در قسمت‌های خیلی مثبت یا خیلی منفی، شیب sigmoid در نمودار خیلی کوچک می‌شود
+# یعنی اگر خروجی نورون خیلی بزرگ باشه، وقتی وارد sigmoid میشه مشتقش تقریبا 0 میشه (روی نمودار خط صاف میشه)
+# این می‌تواند باعث vanishing gradient شود
+# به همین دلیل امروزه در hidden layerها معمولاً ReLU انتخاب محبوب‌تری است
+
 
 # در sklearn
 # در sklearn اسم sigmoid را مینویسیم logistic
 MLPRegressor(activation="logistic")
 
+#----------------------------
+# رسم نمودار:
+import numpy as np
+import matplotlib.pyplot as plt
+
+def sigmoid(x):
+    return 1 / (1 + np.exp(-x))
+
+y_sigmoid = sigmoid(x)
+
+plt.figure(figsize=(7, 5))
+plt.plot(x, y_sigmoid, label="Sigmoid")
+plt.axhline(0, color="black", linewidth=0.8)
+plt.axvline(0, color="black", linewidth=0.8)
+plt.xlabel("x")
+plt.ylabel("Sigmoid(x)")
+plt.title("Sigmoid Activation Function")
+plt.grid(True)
+plt.legend()
+plt.show()
+#----------------------------
 
 
-----------------------------
-✅ Tanh activation function
-----------------------------
-# f(x) = tanh(x)
-# نتیجه بین 1 و 1- هست
+
+"----------------------------"
+"✅ Tanh activation function"
+"----------------------------"
+# f(x) = tanh(x)    همون تانژانت هست
+# همون sigmoid هست با این تفاوت که عدد خروجی بین 1 و 1- هست
                y
                ↑
-               1   
-               |
-               |  ───────────
+               |   
+             1 |  ─────────────
                | /
                |/
--10 -----------/------------ 10  → x
-              /|
+-∞  -----------/------------ +∞  → x
+              /|0
              / |
-   ─────────/  |
+────────────/  | -1
                |
-              -1
+               |
     
-# این af هم مثل sigmoid هست ولی خروجی آن بین 1- تا 1 هست. یعنی:
+# خروجی آن بین 1- تا 1 هست. یعنی:
 # input:  -∞ ───── 0 ───── +∞
 # output: -1 ───── 0 ───── +1
 
 # همچنین tanh(0) = 0
 
+# اما tanh همون مشکل sigmoid را دارد. در قسمت‌های خیلی مثبت یا خیلی منفی، شیب نمودار خیلی کوچک می‌شود
+# یعنی اگر عدد خروجی نورون خیلی بزرگ باشه، وقتی وارد tanh میشه مشتقش تقریبا 0 میشه (روی نمودار خط صاف میشه)
+# این می‌تواند باعث vanishing gradient شود
+
+
 # در sklearn
 MLPRegressor(activation="tanh")
 
 
+#-------------------------
+# رسم نمودار:
+import numpy as np
+import matplotlib.pyplot as plt
 
-----------------------------
-✅ ReLu activation function
-----------------------------
+def tanh(x):
+    return np.tanh(x)
 
+# Generate x values
+x = np.linspace(-5, 5, 500)
+
+# Calculate Tanh
+y = tanh(x)
+
+# Plot
+plt.figure(figsize=(7, 5))
+plt.plot(x, y, label="Tanh")
+plt.axhline(0, color="black", linewidth=0.8)
+plt.axvline(0, color="black", linewidth=0.8)
+plt.xlabel("x")
+plt.ylabel("Tanh(x)")
+plt.title("Tanh Activation Function")
+plt.grid(True)
+plt.legend()
+plt.show()
+#-------------------------
+
+
+
+"----------------------------"
+"✅ ReLu activation function"
+"----------------------------"
+# این AF در سال 2014 برای حل مشکل Sigmoid و tanh اومد و ازون موقع انتخاب پیش فرض برای af در کتابخوانه‌ها شد
                y
                ↑
                1   
@@ -208,7 +282,7 @@ MLPRegressor(activation="tanh")
 
 # f(x)=max(0,x) فرمولش اینه
 # یعنی:
-# اگر x < 0   ->  پس  output = 0  میشه
+# اگر x <= 0   ->  پس  output = 0  میشه
 # اگر x > 0   ->   پس   output = x میشه
 
 x       ReLU(x)
@@ -225,24 +299,57 @@ x       ReLU(x)
 negative → 0
 positive → unchanged
 # و در مقایسه با sigmoid/tanh در بخش مثبت، گرادیان آن به شکل ساده‌تری رفتار می‌کند
-# به همین دلیل در hidden layers شبکه‌های عصبی بسیار رایج است
+# پس مشکل vanishing gradient رو حل کرده و به همین دلیل در hidden layers شبکه‌های عصبی بسیار رایج است
+
+# با این‌وجود، ReLU خودش مشکلاتی هم داره
+# اگر یک نورون همیشه مقدارش منفی باشه، نه تنها خروجی 0 هست، همچنین گرادیان هم 0 هست
+# پس مشکل dead neuron داریم و درواقع اون نورون کلا میمیره
+# پس اون قسمت از شبکه کلا نمیتونه یادگیری انجام بده و مرده حساب میشه
+# برای حل این مشکل اومدن گفتن قبل از صفر دیگه شیب نمودار 0 مطلق نباشه
+# به اینصورت Variant های مختلفی از ReLU درست شد تا مشکل drying ReLU رو حل کنن. مثلا:
+    # leaky relu, ELU, GeLu, SiLu, Swish, ...
 
 
 # در sklearn
 MLPRegressor(activation="relu")
 
-# خود ReLu یکی از اصلی ترین af هاست و از روش هزاران variant ساخته شده. مثلا:
-    # leaky relu, ELU, SiLu, Swish, ...
+
+#---------------------
+# رسم نمودار:
+import numpy as np
+import matplotlib.pyplot as plt
+
+def relu(x):
+    return np.maximum(0, x)
+
+x = np.linspace(-5, 5, 500)
+y_relu = relu(x)
+
+plt.figure(figsize=(7, 5))
+plt.plot(x, y_relu, label="ReLU")
+plt.axhline(0, color="black", linewidth=0.8)
+plt.axvline(0, color="black", linewidth=0.8)
+plt.xlabel("x")
+plt.ylabel("ReLU(x)")
+plt.title("ReLU Activation Function")
+plt.grid(True)
+plt.legend()
+plt.show()
+#--------------------
 
 
-----------------------------------
-✅ Leaky ReLu activation function
-----------------------------------
+
+"----------------------------------"
+"✅ Leaky ReLu activation function"
+"----------------------------------"
 # f(x) = max(αx, x)
 
 # یکی از مشکلا ReLu اینه: x < 0 → 0
-# یعنی نورون ممکن است برای ورودی‌های منفی همیشه خروجی صفر بدهد. به این مشکل Dying ReLU میگن
+# یعنی نورون ممکن است برای ورودی‌های منفی همیشه خروجی صفر بدهد
 # ولی Leaky ReLu برای بخش منفی یک شیب کوچک نگه می‌دارد
+
+# برای مقدار x هایی که کمتر مساوی 0 هست اومدهیه ضریب آلفا (α) درنظر گرفته
+# که از صفر شدن شیب اونها جلوگیری میکنه
 
 f(x)={ x x>0   αx x≤0​
 
@@ -260,11 +367,134 @@ MLPClassifier(activation="leaky_relu")    # این معتبر نیست
 # در sklearn هیچ estimator بنام leaky_relu نداریم
 
 
+#-----------------------------
+# رسم نمودار:
+import numpy as np
+import matplotlib.pyplot as plt
 
-------------------------------
-✅ Softmax activation function
-------------------------------
-# مخصوص classification چند کلاسه
+def leaky_relu(x, alpha=0.01):
+    return np.where(x > 0, x, alpha * x)
+
+# Generate x values
+x = np.linspace(-5, 5, 500)
+
+# Calculate Leaky ReLU
+y = leaky_relu(x)
+
+# Plot
+plt.figure(figsize=(7, 5))
+plt.plot(x, y, label="Leaky ReLU")
+plt.axhline(0, color="black", linewidth=0.8)
+plt.axvline(0, color="black", linewidth=0.8)
+plt.xlabel("x")
+plt.ylabel("Leaky ReLU(x)")
+plt.title("Leaky ReLU Activation Function")
+plt.grid(True)
+plt.legend()
+plt.show()
+#----------------------------------
+
+
+
+"-----------------------------------------------------"
+"✅ ELU (Exponential Linear Unit) activation function"
+"-----------------------------------------------------"
+# برای x < 0 برخلاف ReLU که صفر می‌شود، مقدار منفی و نرم تولید می‌کند
+# حتی smooth تر از leaky relu هست
+# وقتی x خیلی منفی شود، خروجی ELU به -α نزدیک می‌شود
+# x > 0  --> output = x
+# x = 0  --> output = 0
+# x < 0  --> output approaches -alpha
+
+# فرمول:
+#            x                  if x > 0
+# ELU(x) = {
+#            α * (e^x - 1)       if x <= 0
+# معمولا α = 1 درنظر گرفته میشه
+
+#----------------------------------
+# رسم نمودار ELU:
+import numpy as np
+import matplotlib.pyplot as plt
+
+# ELU function
+def elu(x, alpha=1):
+    return np.where(x > 0, x, alpha * (np.exp(x) - 1))
+
+# Generate x values
+x = np.linspace(-5, 5, 500)
+# Calculate ELU
+y = elu(x)
+# Plot
+plt.plot(x, y, label="ELU")
+plt.axhline(0, color="black", linewidth=0.8)
+plt.axvline(0, color="black", linewidth=0.8)
+plt.xlabel("x")
+plt.ylabel("ELU(x)")
+plt.title("ELU Activation Function")
+plt.grid(True)
+plt.legend()
+plt.show()
+#---------------------------------
+
+
+
+"---------------------------------------------------------"
+"✅ GELU (Gaussian Error Linear Unit) activation function"
+"---------------------------------------------------------"
+# در معماری‌های مدرن مثل Transformerها بسیار استفاده می‌شود؛ مثلاً در BERT و بسیاری از مدل‌های زبانی
+# برای xهای مثبت، تقریباً همان مقدار را عبور می‌دهد و برای xهای منفی، به‌تدریج آن‌ها را سرکوب می‌کند
+
+# فرمول اصلی:
+GELU(x)=xΦ(x)
+# اینجا Φ(x) تابع توزیع تجمعی نرمال استاندارد است
+
+# یک فرمول معروف دیگر GELU این هست:
+GELU(x) = x/2 * (1 + erf(x / sqrt(2)))
+
+# رفتار GELU
+# x >> 0  --> GELU(x) ≈ x
+# x << 0  --> GELU(x) ≈ 0
+# x = 0   --> GELU(x) = 0
+# در واقع GELU بطور smooth کنترل میکنه که چه مقدار از x باید از activation عبور کنه
+
+
+#-------------------------
+# رسم نمودار:
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.special import erf
+
+# GELU function
+def gelu(x):
+    return 0.5 * x * (1 + erf(x / np.sqrt(2)))
+
+# Generate x values
+x = np.linspace(-5, 5, 500)
+
+# Calculate GELU
+y = gelu(x)
+
+# Plot
+plt.plot(x, y, label="GELU")
+plt.axhline(0, color="black", linewidth=0.8)
+plt.axvline(0, color="black", linewidth=0.8)
+plt.xlabel("x")
+plt.ylabel("GELU(x)")
+plt.title("GELU Activation Function")
+plt.grid(True)
+plt.legend()
+plt.show()
+#----------------------
+
+
+
+"------------------------------"
+"✅ Softmax activation function"
+"------------------------------"
+# مخصوص multi-class classification
+
+# برعکس بقیه af ها که در hidden layers استفاده میشن، این در output layer استفاده میشه
 
 # فرض کن شبکه برای سه کلاس این خروجی خام را تولید کرده:
 class 0 → 2.5
@@ -286,7 +516,7 @@ Class 2:  7%
 #      z₁      z₂      z₃
 #      ↓       ↓       ↓
 #    ┌─────────────────────┐
-#    │       Softmax       │
+#    │       Softmax       │   Output layer
 #    └─────────────────────┘
 #      ↓       ↓       ↓
 #      P₁      P₂      P₃
@@ -300,41 +530,32 @@ Class 2:  7%
 activation="softmax"   # این اسم معتبر نیست
 # برای softmax هم مثل leark relu اسمی نداریم و sklearn بخش خروجی classification را خودش مدیریت می‌کند
 
+#------------------------------
+# رسم نمودار:
+import numpy as np
+import matplotlib.pyplot as plt
 
+def softmax(x):
+    exp_x = np.exp(x - np.max(x))
+    return exp_x / np.sum(exp_x)
 
--------------------------------
-⭐ activation function summary
--------------------------------
-# در حالت عادی در hidden layers از relu استفاده میکنیم که منفی هارو صفر کنه
-# در لایه آخر از sigmoid استفاده میکنیم که عدد بین 0 و 1 بده و نتیجه بصورت احتمالات (درصدی) نمایش داده بشه
-# ما هزاران af داریم که مهمترینش این 4 تا هستن: linear, relu, sigmoid, tanh
+# Example logits
+logits = np.linspace(-5, 5, 100)
 
-# ReLU
-# negative → 0
-# positive → same value
-# Best default for hidden layers
+# Calculate Softmax
+y_softmax = softmax(logits)
 
-
-# Sigmoid / Logistic
-# output → 0 to 1
-# Useful for probability-like binary outputs
-
-
-# Tanh
-# output → -1 to 1
-# Zero-centered
-
-
-# Softmax
-# multiple class scores
-#         ↓
-# probabilities that sum to 1
-
-
-# Identity
-# output = input
-# Common choice for regression output
-
+plt.figure(figsize=(7, 5))
+plt.plot(logits, y_softmax, label="Softmax")
+plt.axhline(0, color="black", linewidth=0.8)
+plt.axvline(0, color="black", linewidth=0.8)
+plt.xlabel("Logit")
+plt.ylabel("Softmax Probability")
+plt.title("Softmax Function")
+plt.grid(True)
+plt.legend()
+plt.show()
+#----------------------------
 
 
 
@@ -381,9 +602,9 @@ activation="softmax"   # این اسم معتبر نیست
 
 
 
-"----------------------------"
-"   ⭐  Data feeding  ⭐    "
-"----------------------------"
+"-------------------------------------"
+"   ⭐  ANN Data feeding Types ⭐    "
+"-------------------------------------"
 
 # بطور کلی Data feeding یعنی وارد کردن داده‌های آموزشی به شبکه عصبی تا شبکه بتواند از آن‌ها یاد بگیرد
 # مثلا فرض کنیم 1000 تا نمونه داریم
@@ -395,9 +616,9 @@ activation="softmax"   # این اسم معتبر نیست
     # 3. Stochastic / Online
 
 
-----------------------
+"----------------------"
 ✅ Full-Batch feeding
-----------------------
+"----------------------"
 # در این روش کل دیتاست یکجا وارد شبکه میشه
 # سپس یک دور تا آخر میره و loss محاسبه میشه
 # دوباره weight آپدیت میشه و کل دیتاست باز وارد شبکه میشه
@@ -438,7 +659,7 @@ activation="softmax"   # این اسم معتبر نیست
 ----------------------
 # این روش در Deep learning رایج تر است
 # در این روش دیتاست را به گروه‌های کوچک‌تر (batch) تقسیم می‌کنیم
-# هر batch میره توی شبکه و یه دور pass forward میشه
+# هر batch میره توی شبکه و یه دور pass forward میشه که به این چرخه iteration میگن
 # سپس loss محاسبه میشه و weight update انجام میشه
 # در مرحله بعد batch بعدی وارد میشه و ... تا اینکه دیتاست تموم بشه
 
@@ -465,6 +686,7 @@ activation="softmax"   # این اسم معتبر نیست
 
 # مثلا اگه تعداد نمونه ما 1000 تا باشه و 10 تا batch داشته باشیم که هرکدوم 100 تا نمونه دارن
 # پس یک epoch شامل این میشه که 10 دور (هر دور یک batch) وارد شبکه بشه و دیده بشه
+# پس پروسه training ممکنه در چندین epoch انجام بشه
 
 # اگه بگیم Epochs = 5 پس شبکه کل دیتاست رو 5 بار میبینه
 # Epoch 1 → 10 batches
@@ -479,6 +701,269 @@ activation="softmax"   # این اسم معتبر نیست
 # 1000 samples
 # Batch Size = 100
 # 1000 / 100 = 10 batches per epoch
+
+
+
+
+
+
+
+
+
+
+
+'''
+==================================================
+=======  ⭐  Types of loss functions  ⭐  =======
+==================================================
+'''
+# در عمل، شبکه عصبی برای شروع به کارش میاد random initialization انجام میده
+# یعنی بصورت تصادفی میاد یه سری مقدار برای weight و bias در نظر میگیره
+# سپس یه دور تا آخر میره و خروجی رو محاسبه میکنه
+# حالا این پیشبینی میتونه در ابتدا اشتباه باشه. پس شبکه عصبی از کجا باید بفهمه اشتباه کرده؟
+# در واقع loss function ابزاری هست که به شبکه عصبی کمک میکنه واقعیت رو با پیشبینی مقایسه کنه
+# درواقع Loss Function به مدل میگه «چقدر اشتباه کردی؟» تا در زمان آموزش، وزن‌ها طوری تغییر کنن که این خطا کمتر بشه
+
+# به اولین باری که دیتای ورودی میره توی شبکه و تا آخر پردازش میشه و خروجی میاد بیرون feed forward میگن
+# در انتهای feed forward، مقدار خروجی که بدست اومده مقدار خطاش محاسبه میشه
+# سپس عملیات back propagation شروع میشه
+# مقدار error در جهت برعکس به داخل نورون ها فرستاده میشه
+# با توجه به وزن‌ها (وزن ها سهم هر نورون از error رو تعیین میکنن)، مقدار gradient برای هر error محاسبه میشه
+# حالا این مقدار مشتق (گرادیان) رو بر وزن تقسیم میکنه و اینجوری در جهت کاهش loss حرکت میکنه
+# به تدریج (شدتش براساس learning rate مشخص میشه) این loss کم میشه و مقادیر update میشه
+# اینقد ادامه میدیم تا به کمترین مقدار loss برسیم
+# اینجوری optimize ترین weight و bias بدست میاد
+
+# در عمل loss میاد اختلاف واقعیت با مقدار پیشبینی شده رو محاسبه میکنه
+# حالا اگه regression باشه از MSE و MAE استفاده میکنه
+# اگه classification باشه از BCE و CCE استفاده میکنه
+
+
+"----------------------------"
+# ✅ MSE (Mean Square Error)
+"----------------------------"
+
+# MSE = (1/n) * Σ(yi - ŷi)²
+
+# مقدار پیشبینی رو از واقعی کم میکنه و به توان 2 میرسونه
+# این توان 2 باعث میشه خطاهای بزرگ را شدیدتر جریمه کنه
+
+# y = 10
+# ŷ = 7
+# 10 - 7 = 3
+# 3² = 9
+
+
+"----------------------------"
+# ✅ MAE (Mean absolute error)
+"----------------------------"
+
+# تفاوت اصلی با MSE این است که به‌جای مربع کردن خطا، قدر مطلق خطا را می‌گیرد
+# در نتیجه MAE نسبت به خطاهای خیلی بزرگ (outlier)، نسبت به MSE حساسیت کمتری دارد
+
+# MSE = (1/n) * Σ|yi - ŷi|
+
+# Actual = 10
+# Prediction = 7
+# Error = 3
+# MAE = |3| = 3
+
+
+"----------------------------"
+# ✅ Binary Cross Entropy (BCE)
+"----------------------------"
+
+# برای Binary Classification استفاده می‌شود؛ یعنی وقتی فقط دو کلاس داریم. مثلا:
+# Spam / Not Spam
+# Cat / Dog
+# Disease / No Disease
+# 0 / 1
+
+# معمولاً مدل در خروجی یک احتمال بین 0 و 1 تولید می‌کند، مثلاً:
+# Prediction = 0.9
+# یعنی مدل احتمال کلاس 1 را 90٪ می‌داند
+
+# متود BCE زمانی جریمه زیادی می‌دهد که مدل با اعتماد بالا پیش‌بینی اشتباه کند
+# BCE = (-1/n) * Σ[ yi * log(ŷi)   +   (1-yi) * log(1-ŷi) ]
+
+# yi  = Actual label (0 or 1)
+# ŷi  = Predicted probability
+
+
+"----------------------------"
+# ✅ Categorial Cross Entropy
+"----------------------------"
+
+# برای Multi-Class Classification استفاده می‌شود؛ یعنی بیشتر از دو کلاس داریم. مثلا در تشخیص تصویر:
+# Cat      0.70
+# Dog      0.20
+# Horse    0.08
+# Bird     0.02
+# در مورد بالا اگر جواب واقعی Cat باشد، Categorical Cross Entropy مقدار loss نسبتاً کمی خواهد داشت
+
+# اما اگر مدل اینجوری پیشبینی کنه:
+# Cat      0.01
+# Dog      0.90
+# Horse    0.07
+# Bird     0.02
+# در حالی که جواب واقعی Cat است، loss زیادی می‌گیرد
+
+# # CCE = -Σ[yi * log(ŷi)]
+# y = مقدار واقعی
+# ŷ = احتمال پیش‌بینی‌شده توسط مدل
+
+
+
+
+
+
+
+
+
+
+
+'''
+=============================================
+=======  ⭐  Types of optimizer  ⭐  =======
+=============================================
+'''
+# اصلا optimizer چه کاری انجام میده؟
+# در شبکه عصبی، ما یک Loss داریم که می‌گوید مدل چقدر اشتباه کرده
+# درواقع Optimizer با استفاده از Gradient تصمیم می‌گیرد وزن‌های شبکه را چطور تغییر دهد تا Loss کمتر شود
+# فرمولش اینه:        Weight_new = Weight_old - η*gradient
+# η=learning rate
+
+# یعنی Loss میگه چقدر اشتباه کردی
+# سپس Gradient میگه در چه جهتی اشتباه کردی
+# سپس Optimizer تصمیم میگیره چطور وزن‌ها را تغییر بده
+
+# نکته مهم اینه که optimizer با loss function برابر نیست
+# Model -> Prediction -> Loss Function -> Gradient / Backpropagation -> Optimizer -> Update Weights -> Model بهتر
+# یعنی Loss مقدار اشتباه را اندازه می‌گیرد، Backpropagation گرادیان را حساب می‌کند، و Optimizer از آن گرادیان برای تغییر وزن‌ها استفاده می‌کند
+
+
+"-------------------------------------"
+"✅ SGD (Stochastic Gradient Descent) "
+"-------------------------------------"
+
+# ساده ترین نوع optimizer هست که فرمولش اینه:
+    # Weight_new = Weight_old - η*gradient
+    # η=learning rate
+
+# مشکل SGD اینه که همیشه با یک Learning Rate ثابت حرکت می‌کنه
+# در نتیجه ممکنه مشکلاتی واسش پیش بیاد. مثلا:
+# حرکتش به سمت minimum کند باشه
+# در مسیر نوسان داشته باشه
+# در بعضی شرایط سخت بهینه‌سازی، آموزش طولانی بشه
+
+# pytorch
+torch.optim.SGD(...)
+
+
+
+"-------------------"
+"✅ SGD + momentum "
+"-------------------"
+
+# ایده‌ی Momentum شبیه اضافه کردن حافظه به SGD است.
+# به‌جای اینکه فقط Gradient فعلی را در نظر بگیریم، بخشی از حرکت قبلی را هم حفظ می‌کنیم
+
+# فرمول:
+# Vt​=βVt−1​+gt​    β = معمولا 0.9     g=gradient
+# Wt+1​=Wt​−ηV     η = learning rate   
+
+# در نتیجه اگر Gradientها چند مرحله پشت سر هم در یک جهت باشند، Momentum سرعت حرکت را بیشتر می‌کند
+# درواقع SGD -> گرادیان حرکت فعلی
+# ولی SGD + momentum -> گرادیان حرکت فعلی + حرکت قبلی = حرکت جدید
+# این کار معمولاً باعث حرکت روان‌تر و سریع‌تر در مسیر بهینه‌سازی می‌شود
+
+# مشکل اینه که خیلی وقتا ما بجای پیدا کردن global minima، داخل local minima گیر میوفتیم
+# برای اینکه داخل local minima گیر نکنیم باید یه سرعت و شتاب مناسب داشته باشیم
+# تا وقتی رفت توی minima بتونیم ازش خارج بشیم وگرنه اگه سرعت خیلی کم باشه کلا اونجا گیر میکنیم
+# پس باید داخل update formula خودمون یک فرمولی بزاریم که سرعت و شتاب مناسب بهمون بده
+# به این مجموع سرعت و شتاب میگن momentum
+
+# pytorch
+import torch
+torch.optim.SGD(
+    model.parameters(), 
+    lr=0.01, 
+    momentum=0.9)
+
+
+
+"--------------------------------"
+"✅ AdaGrad (Adaptive Gradient) "
+"--------------------------------"
+
+# ایده اصلی پشتش اینه که Learning Rate برای هر پارامتر می‌تواند متفاوت باشه
+# پارامترهایی که Gradientهای بزرگ‌تری داشته‌اند، به مرور Learning Rate مؤثر کوچک‌تری می‌گیرند
+
+# مزیت این روش اینه که Learning Rate را به‌صورت تطبیقی (dynamic) برای پارامترهای مختلف تنظیم می‌کنه
+# مشکلش اینه که گرادیان همیشه در حال جمع شدن هست:
+    # G = gradient² + gradient² + gradient² + ...
+
+# بنابراین ممکن است Learning Rate مؤثر به مرور خیلی کوچک شود و آموزش تقریباً متوقف شود
+# به همین دلیل روش‌های بعدی مثل RMSProp توسعه پیدا کردند
+
+# pytorch
+torch.optim.Adagrad(...)
+
+
+
+"------------"
+"✅ RMSProp "
+"------------"
+
+# این الگوریتم برای حل مشکل AdaGrad اومد
+# الگوریتم AdaGrad یه history از گرادیان های قبلی جمع میکنه که باعث میشه گرادیان کلی اینقد بزرگ بشه که lr مجبور بشه خیلی کوچیک بشه
+# ولی RMSProp دیگه اینکارو نمیکنه. بجای اینکه کلی گرادیان بیاد Accumulate کنه میاد تعداد محدودی گرادیان جمع میکنه
+# درواقع یک میانگین نمایی متحرک از مربع Gradientها نگه می‌داریم
+# با وجود این forgetting mechanism دیگه از بزرگ شدن بیش از حد گرادیان جلوگیری میکنه
+# درنتیجه learning rate قابل کنترل تر میشه
+
+# pytorch
+torch.optim.RMSprop(...)
+
+
+
+"-------------------------------------"
+"✅ Adam (Adaptive Moment Estimation) "
+"-------------------------------------"
+
+# ترکیبی از momentum و RMSProp هست
+# یعنی هم:
+# میانگین Gradientها را دنبال می‌کنه
+# میانگین مربع Gradientها را دنبال می‌کنه
+
+# چرا Adam محبوب است؟
+# چون هم Momentum دارد و هم Learning Rate تطبیقی
+
+# pytorch
+torch.optim.adam(...)
+
+
+
+"-----------"
+"✅ AdamW  "
+"-----------"
+# الگوریتم AdamW بسیار شبیه Adam است، اما یک تفاوت مهم در نحوه‌ی اعمال Weight Decay دارد
+# امروزه transformer model های مدرن مثل BERT و GPT و ... از مدل جدید AdamW استفاده میکنن
+
+# ایده پشتش اینه:
+    # Adam + Weight Decay جداشده از به‌روزرسانی Gradient
+
+# در Adam معمولی، Weight Decay معمولاً به شکل L2 regularization وارد Gradient می‌شود
+# اما AdamW آن را به‌صورت decoupled weight decay جداگانه اعمال می‌کند
+
+# pytorch
+torch.optim.AdamW(...)
+
+
+
+
+
+
 
 
 

@@ -50,7 +50,7 @@ This repo contains Tutorial files for professional AI Engineering: numerical com
 | **22** | Unsupervised ML | ✅Intro on Clustering (KMeans, Hierarchial, DBSCAN, Gaussian Mixture)  ✅Dimentional reduction (PCA, KernelPCA, t-SNE, UMAP) | [unsupervised_ML.py](Tutorials/unsupervised_ML.py) |
 | **23** | Machine Learning Examples | ✅ Real examples of supervised regression, supervised classification and unsupervised clustering  ✅ correlation matrix  ✅ confusion matrix | [ML_examples.py](Tutorials/ML_examples.py) |
 | **24** | Artificial Neural Networks (ANN) Intro | ✅Structure of the ANN  ✅Input,Output,Weight  ✅Forward path  ✅Activation function intro  ✅Backpropagation  ✅Process of training in ANN  ✅Intro of Deep Learning | [neural_nets_intro.ipynb](Tutorials/neural_nets_intro.ipynb) |
-| **25** | Deep Learning | ✅Intro of activation functions  ✅Neural nets layers  ✅Data feeding  ✅MLPClassifier  ✅MLPRegressor  ✅MLP real example coding  ✅Tensorflow  ✅Keras  ✅MNIST dataset  ✅Pytorch | [deel_learning.py](Tutorials/deep_learning.py) |
+| **25** | Deep Learning | ✅Intro of activation functions  ✅Neural nets layers  ✅Data feeding  ✅Types of loss function(MSE, MAE, BCE, CCE)  ✅Optimizer (SGD, Momentum, AdaGrad, RMSProp, adam, adamW)  ✅MLPClassifier  ✅MLPRegressor  ✅MLP real example coding  ✅Tensorflow  ✅Keras  ✅MNIST dataset  ✅Pytorch | [deep_learning.py](Tutorials/deep_learning.py) |
 
 
 
