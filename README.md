@@ -51,6 +51,8 @@ This repo contains Tutorial files for professional AI Engineering: numerical com
 | **23** | Machine Learning Examples | ✅ Real examples of supervised regression, supervised classification and unsupervised clustering  ✅ correlation matrix  ✅ confusion matrix | [ML_examples.py](Tutorials/ML_examples.py) |
 | **24** | Artificial Neural Networks (ANN) Intro | ✅Structure of the ANN  ✅Input,Output,Weight  ✅Forward path  ✅Activation function intro  ✅Backpropagation  ✅Process of training in ANN  ✅Intro of Deep Learning | [neural_nets_intro.ipynb](Tutorials/neural_nets_intro.ipynb) |
 | **25** | Deep Learning | ✅Intro of activation functions  ✅Neural nets layers  ✅Data feeding  ✅Types of loss function(MSE, MAE, BCE, CCE)  ✅Optimizer (SGD, Momentum, AdaGrad, RMSProp, adam, adamW)  ✅MLPClassifier  ✅MLPRegressor  ✅MLP real example coding  ✅Tensorflow  ✅Keras  ✅MNIST dataset  ✅Pytorch | [deep_learning.py](Tutorials/deep_learning.py) |
+| **26** | Deep learning coding | ✅general overview of Tensorflow and Pytorch  ✅Real example coding of Tensorflow/keras and Pytorch | [deep_learning_coding.py](Tutorials/deep_learning_coding.py) |
+| **27** | Convolutional Neural Network (CNNs) | ✅General overview of CNN  ✅CNN coding | [CNN.py](Tutorials/CNN.py) |
 
 
 
@@ -115,8 +117,8 @@ AI/
 │   ├── unsupervised_ML.py
 │   ├── neural_nets_intro.ipynb    #introduction of Artificial Neural Networks
 │   ├── deep_learning.py         # basic concepts of deep learning
-│   ├──
-│   ├──
+│   ├── deep_learning_coding.py
+│   ├── CNN.py
 │   ├──
 │   ├──
 │   ├──
