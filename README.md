@@ -53,6 +53,12 @@ This repo contains Tutorial files for professional AI Engineering: numerical com
 | **25** | Deep Learning | ✅Intro of activation functions  ✅Neural nets layers  ✅Data feeding  ✅Types of loss function(MSE, MAE, BCE, CCE)  ✅Optimizer (SGD, Momentum, AdaGrad, RMSProp, adam, adamW)  ✅MLPClassifier  ✅MLPRegressor  ✅MLP real example coding  ✅Tensorflow  ✅Keras  ✅MNIST dataset  ✅Pytorch | [deep_learning.py](Tutorials/deep_learning.py) |
 | **26** | Deep learning coding | ✅general overview of Tensorflow and Pytorch  ✅Real example coding of Tensorflow/keras and Pytorch | [deep_learning_coding.py](Tutorials/deep_learning_coding.py) |
 | **27** | Convolutional Neural Network (CNNs) | ✅General overview of CNN  ✅CNN coding | [CNN.py](Tutorials/CNN.py) |
+| **28** | Recurrent neural networks (RNN) | ✅Intro on RNN and recurrent feedback loops  ✅RNN coding with pytorch, Tensorflow/keras  ✅Vanishig/Explodng gradient | [RNN.py](Tutorials/RNN.py) |
+| **29** | Natural Language processing (NLP) | ✅Tokenization  ✅Vocabulary  ✅Numerical representation  ✅Embedding models  ✅genism library  ✅Word2Vec model (CBOW model, Skip-gram model)  ✅SpaCy library for NLP  ✅Natural Language Toolkit (NLTk) for NLP  ✅NLP coding | [NLP.py](Tutorials/NLP.py) |
+| **30** | Long-Short Term Memory (LSTM) | ✅RNN limitations and emergence of LSTM  ✅LSTM structure (Time step / Cell state / Gates)  ✅LSTM codes with numpy, Pytorch, Tensorflow/keras | [LSTM.py](Tutorials/LSTM.py) |
+| **31** | Gated Recurrent Unit (GRU) | ✅RNN limitations and emergence of GRU  ✅GRU structure (Update gate, Reset gate)  ✅GRU codes with numpy, Pytorch | [GRU.py](Tutorials/GRU.py) |
+
+
 
 
 
@@ -119,6 +125,15 @@ AI/
 │   ├── deep_learning.py         # basic concepts of deep learning
 │   ├── deep_learning_coding.py
 │   ├── CNN.py
+│   ├── RNN.py      #ANN architecture
+│   ├── LSTM.py     #ANN architecture
+│   ├── GRU.py      #ANN architecture
+│   ├──
+│   ├──
+│   ├──
+│   ├──
+│   ├──
+│   ├──
 │   ├──
 │   ├──
 │   ├──
