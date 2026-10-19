@@ -57,6 +57,9 @@ This repo contains Tutorial files for professional AI Engineering: numerical com
 | **29** | Natural Language processing (NLP) | ✅Tokenization  ✅Vocabulary  ✅Numerical representation  ✅Embedding models  ✅genism library  ✅Word2Vec model (CBOW model, Skip-gram model)  ✅SpaCy library for NLP  ✅Natural Language Toolkit (NLTk) for NLP  ✅NLP coding | [NLP.py](Tutorials/NLP.py) |
 | **30** | Long-Short Term Memory (LSTM) | ✅RNN limitations and emergence of LSTM  ✅LSTM structure (Time step / Cell state / Gates)  ✅LSTM codes with numpy, Pytorch, Tensorflow/keras | [LSTM.py](Tutorials/LSTM.py) |
 | **31** | Gated Recurrent Unit (GRU) | ✅RNN limitations and emergence of GRU  ✅GRU structure (Update gate, Reset gate)  ✅GRU codes with numpy, Pytorch | [GRU.py](Tutorials/GRU.py) |
+| **32** | Autoencoder | ✅Intro on Encoder-decoder for latent represnetation  ✅Types of Autoencoder(Undercomplete, sparse, denoising, VAE, ...)  ✅Simple, Denoising, Sparse, Convolutional Autoencoder codes in Pytorch and Tensorflow/keras  | [Autoencoder.py](Tutorials/Autoencoder.py) |
+| **33** | Deep Generative Model | ✅intro on Variational autoencoder (VAE) and Generative Adversial network (GAN)  ✅VAE and GAN full coding in Pytorch  | [generative_model.py](Tutorials/generative_model.py) |
+
 
 
 
