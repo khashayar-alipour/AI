@@ -323,6 +323,16 @@
 
 
 
+#                                     ___________________________        Real 1
+#  High dimentional  -->   Real  -->  |  Discriminative network | --->   Fake 0
+#   sample space          images      |_________________________|
+#                                                          ^
+#                        ______________________            |
+#  Low dimentional   --> | Generative network | --> Generated fake
+#    latent space        |____________________|        images
+
+
+
 "✅ How two networks train at the same time?"
 # آموزش GAN را می‌توان در دو مرحله‌ی اصلی خلاصه کرد
 

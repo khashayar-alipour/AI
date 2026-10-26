@@ -59,6 +59,15 @@ This repo contains Tutorial files for professional AI Engineering: numerical com
 | **31** | Gated Recurrent Unit (GRU) | ✅RNN limitations and emergence of GRU  ✅GRU structure (Update gate, Reset gate)  ✅GRU codes with numpy, Pytorch | [GRU.py](Tutorials/GRU.py) |
 | **32** | Autoencoder | ✅Intro on Encoder-decoder for latent represnetation  ✅Types of Autoencoder(Undercomplete, sparse, denoising, VAE, ...)  ✅Simple, Denoising, Sparse, Convolutional Autoencoder codes in Pytorch and Tensorflow/keras  | [Autoencoder.py](Tutorials/Autoencoder.py) |
 | **33** | Deep Generative Model | ✅intro on Variational autoencoder (VAE) and Generative Adversial network (GAN)  ✅VAE and GAN full coding in Pytorch  | [generative_model.py](Tutorials/generative_model.py) |
+| **34** | Autoencoder exmple (0-100 coding) | ✅Training Autoencoder on MNIST dataset with pytorch | [Autoencoder_example.py](Tutorials/Autoencoder_example.py) |
+| **35** | Variational Autoencoder (VAE) example 1 (0-100 coding) | ✅Training VAE on MNIST dataset with Pytorch | [VAE_example.py](Tutorials/VAE_example.py) |
+| **36** | Variational Autoencoder (VAE) example 2 (0-100 coding) | ✅Training VAE on CelebA faces datasets with Pytorch | [VAE_example2.py](Tutorials/VAE_example2.py) |
+| **37** | RNN on sentiment analysis (0-100 coding) | ✅Training RNN, LSTM , GRU on iMDB dataset for sentiment analysis with pytorch | [RNN_example.py](Tutorials/RNN_example.py) |
+| **38** | LSTM on bitcoin prediction (0-100 coding) | ✅Training LSTM on bitcoin 60 days to predict next 7 days on gecoin dataset with pytorch | [LSTM_example1.py](Tutorials/LSTM_example1.py) |
+| **39** | LSTM on Khayyam Poems (0-100 coding) | ✅Training LSTM on Khayyam poems on ganjoor scraped data with pytorch | [LSTM_example2.py](Tutorials/LSTM_example2.py) |
+| **40** | LSTM Autocomplete python codes (0-100 coding) | ✅Training LSTM on python codes for building python auto completion with pytorch | [LSTM_example3.py](Tutorials/LSTM_example3.py) |
+| **41** | LSTM on speech recognition | ✅Training LSTM on Speech recognition commands with pytorch | [LSTM_example4.py](Tutorials/LSTM_example4.py) |
+
 
 
 
